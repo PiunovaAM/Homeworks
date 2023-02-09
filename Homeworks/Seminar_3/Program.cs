@@ -1,6 +1,6 @@
 ﻿//Задача 19:
 //Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом
-//14212 -> нет
+//24121 -> нет
 //12821 -> да
 //23432 -> да
 /*
@@ -22,7 +22,25 @@ if (number!.Length == 5)
 }
 else Console.WriteLine($"Input right number");
 */
+// или
+/*
+void Palindrome (int number)
+{
+    if(number%10 != number/10%10 & number%10 != number/100%10 & number/10%10 != number/100%10)
+    {
+        Console.Write($"{number} is palindrome");
+    }
+    else Console.Write($"{number} is NOT palindrome");
+}
+Console.Write("Input your five-digit number: ");
+int user_number = Convert.ToInt32(Console.ReadLine());
 
+if (user_number > 10000 & user_number < 100000)
+{
+    Palindrome(user_number);
+}
+else Console.WriteLine("Input five-digit number");
+*/
 //Задача 21:
 //Напишите программу, которая принимает на вход координаты двух точек
 //и находит расстояние между ними в 3D пространстве.
@@ -56,4 +74,32 @@ int zBCoord = Convert.ToInt32(Console.ReadLine());
 double distanceAB = DistanceAB(xACoord, yACoord, zACoord, xBCoord, yBCoord, zBCoord);
 
 Console.WriteLine($"Distance between A and B is {distanceAB}");
+*/
+
+//Задача 23
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+//3 -> 1, 8, 27
+//5 -> 1, 8, 27, 64, 125
+
+/*
+void Cubes(int uN)
+{
+    int current = 1; // ввели перменную, которую будем возводить в куб
+    while (current <= uN) //ограничили условием, что переменная не должна превышать user number (uN)
+    {
+        int res = current * current * current; // ввели доп.переменную, которая считает куб
+        Console.Write($"{res}, ");
+        current++; // повторяем цикл до завершения (current +1)
+    }
+    Console.WriteLine("\b\b.");
+}
+Console.Write("Input number: ");
+int user_number = Convert.ToInt32(Console.ReadLine());
+
+if (user_number >= 1)
+{
+    Console.Write($"{user_number} -> ");
+    Cubes(user_number);
+}
+else Console.Write("Impossible value!");
 */

@@ -1,7 +1,32 @@
-﻿//Задача 21:
+﻿//Задача 19:
+//Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом
+//14212 -> нет
+//12821 -> да
+//23432 -> да
+/*
+void Palindrome (string number)
+{
+    if (number [0] == number [4] && number [1] == number [3])
+    {
+        Console.Write($"Your {number} is palindrome");
+    }
+    else Console.Write($"Your {number} isn't palindrome");
+}
+
+Console.Write("Input your five-digit number: ");
+string? number = Console.ReadLine();
+
+if (number!.Length == 5)
+{
+    Palindrome(number);
+}
+else Console.WriteLine($"Input right number");
+*/
+
+//Задача 21:
 //Напишите программу, которая принимает на вход координаты двух точек
 //и находит расстояние между ними в 3D пространстве.
-
+/*
 double DistanceAB(int xa, int ya, int za, int xb, int yb, int zb)
 {
     int deltaX = xa - xb;
@@ -31,3 +56,4 @@ int zBCoord = Convert.ToInt32(Console.ReadLine());
 double distanceAB = DistanceAB(xACoord, yACoord, zACoord, xBCoord, yBCoord, zBCoord);
 
 Console.WriteLine($"Distance between A and B is {distanceAB}");
+*/
